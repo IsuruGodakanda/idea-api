@@ -7,6 +7,8 @@ import { IdeaDTO } from './idea.dto';
 export class IdeaController {
   constructor(private ideaService: IdeaService) {}
 
+  // Initialize CRUD Routes
+
   @Get()
   showAllIdeas() {
     return this.ideaService.showAll();

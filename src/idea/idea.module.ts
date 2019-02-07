@@ -7,6 +7,7 @@ import { IdeaService } from './idea.service';
 
 
 @Module({
+  // Connect IdeaEntity to database
   imports: [TypeOrmModule.forFeature([IdeaEntity])],
   controllers: [IdeaController],
   providers: [IdeaService]

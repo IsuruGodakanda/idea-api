@@ -1,0 +1,26 @@
+type Idea {
+  id: ID!
+  updated: String!
+  created: String!
+  idea: String!
+  description: String!
+  author: User
+  upvotes: Int
+  downvotes: Int
+  comments: [Comment!]
+}
+
+type Query {
+  ideas(page: Int, newest: Boolean): [Idea!]
+}
+
+# export class IdeaRO {
+#   id?: string;
+#   updated: Date;
+#   created: Date;
+#   idea: string;
+#   description: string;
+#   author: UserRO;
+#   upvotes?: number;
+#   downvotes?: number;
+# }

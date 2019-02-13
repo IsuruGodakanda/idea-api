@@ -1,8 +1,20 @@
 type User {
-  id: String!
+  id: ID!
   username: String!
+  created: String!
+  bookmarks: [Idea!]
+  ideas: [Idea!]
+  comments: [Comment!]
 }
 
 type Query {
-  users: [User!]
+  users(page: Int): [User!]
 }
+
+# export class UserRO {
+#   id: string;
+#   username: string;
+#   created: Date;
+#   token?: string;
+#   bookmarks?: IdeaEntity[];
+# }
